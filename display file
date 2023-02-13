@@ -1,0 +1,3 @@
+getwd()
+
+bfast<-read.csv("book1.csv",header=TRUE,sep=",")
