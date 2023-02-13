@@ -1,0 +1,13 @@
+> names<-c("Ram","Shyam","Kumar")
+> age<-c(23,24,35)
+> marks<-C(88,78,25)
+> df<-data.frame(names,age,marks)
+> mean(df $marks)
+[1] 63.66667
+> median(df $marks)
+[1] 78
+> mode(df $marks)
+[1] "numeric"
+> summary(df $marks)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  25.00   51.50   78.00   63.67   83.00   88.00 
