@@ -1,0 +1,8 @@
+diabetes <- read.csv("diabetes.csv")
+plot(diabetes$Age, diabetes$BloodPressure, main = "Scatterplot of Blood Pressure vs Age", 
+     xlab = "Age", ylab = "Blood Pressure", pch = 20)
+age_group <- cut(diabetes$Age, breaks = c(20, 40, 60, 80), labels = c("20-40", "40-60", "60-80"))
+diabetes$age_group <- age_group
+avg_bp_by_age_group <- aggregate(BloodPressure ~ age_group, data = diabetes, mean)
+barplot(avg_bp_by_age_group$BloodPressure, names.arg = avg_bp_by_age_group$age_group,
+        main = "Average Blood Pressure by Age Group", xlab = "Age Group", ylab = "Blood Pressure")
